@@ -8,12 +8,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <div x-data="{ nama: 'adji hendrawan' }" class="flex h-15 justify-center items-center bg-gray-400">
+    <div x-data="{ nama: 'adji hendrawan', website : '<a href=\'http://google.com\'>klik disini</a>' }" class="flex h-15 justify-center items-center bg-gray-400">
         <div x-data="{ umur: 35}" >
             <span x-text="nama"></span>
             <span x-text="umur"></span>
             <p>2 tahun lagi, mas <span x-text="nama"></span> akan berumur <span x-text="umur + 2"></span></p>
             <p>tebak apakah mas <span x-text="nama"></span> mature ? <span x-text="umur > 38 ? 'mature' : 'menuju mature'"></span></p>
+            <p>Ini adalah website dari mas <span x-text="nama"></span>  <span x-html="website"></span></p>
         </div>
     </div>
 </body>
