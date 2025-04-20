@@ -34,9 +34,11 @@
         </template>
     </div> 
 
-    <!-- about event listener x-on -->
-    <div class="mt-10" x-data="{ message: 'Halo terimakasih udah di klik!' }">
+    <!-- about event listener -->
+    <div class="mt-10" x-data="{ message: 'Halo terimakasih udah di coba event listener!' }">
         <p><button x-on:click="alert(message)" class="bg-gray-400 border-solid border-black border-3">coba klik x-on ini! </button></p>
+        <p><button @mouseenter="alert(message)" class="bg-gray-400 border-solid border-black border-3">coba mouse deketin! </button></p>
+        <p><button @dblclick="alert(message)" class="bg-gray-400 border-solid border-black border-3">coba mouse doubleklik! </button></p>
     </div> 
 </body>
 </html>
