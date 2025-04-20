@@ -22,5 +22,12 @@
         <p><button @click="isOpen = !isOpen" x-text="isOpen ? 'tutup pesan!' : 'buka pesan!'" class="bg-gray-400 border-solid border-black border-3">coba klik</button></p>
         <p><span x-show="isOpen">aku mencintai mu heny , azka dan harraz</span></p>
     </div>  
+
+    <div class="mt-10" x-data="{ isOpen : false }">
+        <p><button @click="isOpen = !isOpen" x-text="isOpen ? 'tutup pesan pake if!' : 'buka pesan pake if!'" class="bg-gray-400 border-solid border-black border-3">coba klik</button></p>
+        <template x-if="isOpen">
+            <p><span>aku mencintai mu heny , azka dan harraz (wajib pake tag template!)</span></p>
+        </template>
+    </div> 
 </body>
 </html>
