@@ -33,5 +33,10 @@
             <p><span>aku mencintai mu heny , azka dan harraz (wajib pake tag template!)</span></p>
         </template>
     </div> 
+
+    <!-- about event listener x-on -->
+    <div class="mt-10" x-data="{ message: 'Halo terimakasih udah di klik!' }">
+        <p><button x-on:click="alert(message)" class="bg-gray-400 border-solid border-black border-3">coba klik x-on ini! </button></p>
+    </div> 
 </body>
 </html>
