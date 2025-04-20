@@ -39,7 +39,7 @@
         <p><button x-on:click="alert(message)" class="bg-gray-400 border-solid border-black border-3">coba klik x-on ini! </button></p>
         <p><button @mouseenter="alert(message)" class="bg-gray-400 border-solid border-black border-3">coba mouse deketin! </button></p>
         <p><button @dblclick="alert(message)" class="bg-gray-400 border-solid border-black border-3">coba mouse doubleklik! </button></p>
-        <p><button x-on:click="console.log($event)" class="bg-gray-400 border-solid border-black border-3">coba klik untuk debug event di console log </button></p>
+        <p><button x-on:click="console.log(event.target.id)" id="azkaku" class="bg-gray-400 border-solid border-black border-3">coba klik untuk debug event di console log </button></p>
     </div> 
 </body>
 </html>
