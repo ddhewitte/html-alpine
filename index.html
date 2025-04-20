@@ -8,6 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
+
+    <!-- about x-data, x-text, x-html -->
     <div x-data="{ nama: 'adji hendrawan', website : '<a href=\'http://google.com\'>klik disini</a>' }" class="flex h-15 justify-center items-center bg-gray-400">
         <div x-data="{ umur: 35}" >
             <span x-text="nama"></span>
@@ -18,11 +20,13 @@
         </div>
     </div>
 
+    <!-- x-show (show hide button), x-transition, x-bind (class manipulation) onclick method -->
     <div class="mt-10" x-data="{ isOpen : false }">
         <p><button @click="isOpen = !isOpen" x-text="isOpen ? 'tutup pesan!' : 'buka pesan!'" x-bind:class="isOpen ? 'bg-gray-500' : 'bg-gray-300' " class="border-solid border-black border-3">coba klik</button></p>
         <p><span x-show="isOpen" x-transition.duration.3000ms>aku mencintai mu heny , azka dan harraz</span></p>
     </div>  
 
+    <!-- about x-show with x-if template -->
     <div class="mt-10" x-data="{ isOpen : false }">
         <p><button @click="isOpen = !isOpen" x-text="isOpen ? 'tutup pesan pake if!' : 'buka pesan pake if!'" class="bg-gray-400 border-solid border-black border-3">coba klik</button></p>
         <template x-if="isOpen">
